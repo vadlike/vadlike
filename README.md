@@ -51,7 +51,12 @@
 </div>
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=vadlike&theme=onestar&no-frame=true&no-bg=true&column=6&margin-w=8&margin-h=8" alt="Trophies" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=vadlike&theme=github_dark" alt="Profile Summary Card" />
+</div>
+
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=vadlike&theme=github_dark" alt="Repos per Language" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=vadlike&theme=github_dark" alt="Most Commit Language" />
 </div>
 
 <div align="center">
@@ -60,18 +65,13 @@
 
 ## Contribution Snake
 <div align="center">
-  <img src="https://raw.githubusercontent.com/vadlike/vadlike/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+  <img src="https://raw.githubusercontent.com/beatboxvad5/beatboxvad5/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 </div>
 
 ## Dev Quote
 <div align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark" alt="Dev Quote" />
 </div>
-
-## 2026 Focus
-- Ship complete, documented utilities.
-- Improve repo quality: README, releases, screenshots.
-- Publish stable versions of core VADLIKE tools.
 
 ---
 <div align="center">
