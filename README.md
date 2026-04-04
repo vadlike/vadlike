@@ -71,6 +71,9 @@ Most of my work lives at the intersection of Windows workflows, scripting, syste
 <table>
   <tr>
     <td width="50%" valign="top">
+      <p>
+  <img src="https://img.shields.io/badge/Flagship-Windows%20Suite-991b1b?style=flat-square" alt="Flagship">
+      </p>
       <h3>VAD Control Suite</h3>
       <p>Tray-first Windows control center for monitor blackout, desktop layouts, window tools, quick launcher folders, jiggler modes, and scheduled power actions.</p>
       <p>
@@ -83,6 +86,9 @@ Most of my work lives at the intersection of Windows workflows, scripting, syste
       <p><a href="https://github.com/vadlike/VAD-Control-Suite"><strong>Open repository</strong></a></p>
     </td>
     <td width="50%" valign="top">
+      <p>
+  <img src="https://img.shields.io/badge/Featured-Audio%20Guard-0f766e?style=flat-square" alt="Featured">
+      </p>
       <h3>MicGuard</h3>
       <p>Lightweight Windows audio utility that keeps your preferred microphone selected, blocks unwanted device takeovers, and gives fast per-app volume control from a tray-first workflow.</p>
       <p>
@@ -97,19 +103,9 @@ Most of my work lives at the intersection of Windows workflows, scripting, syste
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>NanoKVM Pro DIY Apps</h3>
-      <p>Curated collection of standalone touch-friendly apps for NanoKVM Pro, covering Wi-Fi, virtual media, KVM switching, HID automation, network testing, and service toggles.</p>
       <p>
-  <img src="https://img.shields.io/github/stars/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="Stars">
-  <img src="https://img.shields.io/github/last-commit/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="Last commit">
-  <img src="https://img.shields.io/github/languages/top/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="Top language">
-  <img src="https://img.shields.io/github/license/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="License">
-  <img src="https://img.shields.io/badge/Device-NanoKVM%20Pro-b91c1c?style=flat-square" alt="Device">
-  <img src="https://img.shields.io/badge/Category-App%20Hub-1d4ed8?style=flat-square" alt="Category">
+  <img src="https://img.shields.io/badge/NanoKVM-Security%20Hardened-7c2d12?style=flat-square" alt="NanoKVM">
       </p>
-      <p><a href="https://github.com/vadlike/NanoKVM-Pro-DIY-APPS"><strong>Open repository</strong></a></p>
-    </td>
-    <td width="50%" valign="top">
       <h3>NanoKVM Pro Mount Web Manager</h3>
       <p>NanoKVM Pro web manager with a hardened file manager, inline ISO mount actions, upload-from-URL support, and torrent downloads in a dark NanoKVM-themed UI.</p>
       <p>
@@ -122,9 +118,28 @@ Most of my work lives at the intersection of Windows workflows, scripting, syste
       </p>
       <p><a href="https://github.com/vadlike/NanoKVM-Pro-Mount-web-manager"><strong>Open repository</strong></a></p>
     </td>
+    <td width="50%" valign="top">
+      <p>
+  <img src="https://img.shields.io/badge/NanoKVM-Touch%20Apps-1d4ed8?style=flat-square" alt="NanoKVM">
+      </p>
+      <h3>NanoKVM Pro DIY Apps</h3>
+      <p>Curated collection of standalone touch-friendly apps for NanoKVM Pro, covering Wi-Fi, virtual media, KVM switching, HID automation, network testing, and service toggles.</p>
+      <p>
+  <img src="https://img.shields.io/github/stars/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="Stars">
+  <img src="https://img.shields.io/github/last-commit/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="Last commit">
+  <img src="https://img.shields.io/github/languages/top/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="Top language">
+  <img src="https://img.shields.io/github/license/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Device-NanoKVM%20Pro-b91c1c?style=flat-square" alt="Device">
+  <img src="https://img.shields.io/badge/Category-App%20Hub-1d4ed8?style=flat-square" alt="Category">
+      </p>
+      <p><a href="https://github.com/vadlike/NanoKVM-Pro-DIY-APPS"><strong>Open repository</strong></a></p>
+    </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
+      <p>
+  <img src="https://img.shields.io/badge/NanoKVM-SSH%20Mirror-334155?style=flat-square" alt="NanoKVM">
+      </p>
       <h3>NanoKVM Pro Mirror</h3>
       <p>Portable Windows viewer for mirroring the local NanoKVM LCD over SSH, with mouse tap and swipe control plus extra buttons for knob-style actions.</p>
       <p>
