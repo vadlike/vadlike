@@ -1,4 +1,10 @@
-<h1 align="center">VADLIKE</h1>
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=210&color=0:0d0d0d,50:8b0000,100:0d0d0d&text=VADLIKE&fontSize=62&fontAlignY=38&desc=Builder%20of%20Tools%2C%20Apps%2C%20Automation&descAlignY=60&fontColor=ffffff&descAlign=50&animation=fadeIn" alt="VADLIKE Banner">
+</div>
+
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2600&pause=900&color=E53935&center=true&vCenter=true&width=920&lines=Windows-first+tools+and+automation;PowerShell+%7C+Python+%7C+C%23;Desktop+utilities+that+solve+real+problems" alt="Animated intro">
+</div>
 
 <p align="center">
   Building utility software, automation systems, and practical desktop products.
