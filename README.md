@@ -83,42 +83,61 @@ Most of my work lives at the intersection of Windows workflows, scripting, syste
       <p><a href="https://github.com/vadlike/VAD-Control-Suite"><strong>Open repository</strong></a></p>
     </td>
     <td width="50%" valign="top">
-      <h3>NanoKVMPro USB Graphic Driver Wrapper</h3>
-      <p>Ready-to-use Windows driver wrapper with a simplified install and removal flow for the NanoKVM Pro USB graphic driver.</p>
+      <h3>MicGuard</h3>
+      <p>Lightweight Windows audio utility that keeps your preferred microphone selected, blocks unwanted device takeovers, and gives fast per-app volume control from a tray-first workflow.</p>
       <p>
-  <img src="https://img.shields.io/github/stars/vadlike/nanokvmpro-usb-graphic-driver-wrapper?style=flat-square" alt="Stars">
-  <img src="https://img.shields.io/github/last-commit/vadlike/nanokvmpro-usb-graphic-driver-wrapper?style=flat-square" alt="Last commit">
-  <img src="https://img.shields.io/github/languages/top/vadlike/nanokvmpro-usb-graphic-driver-wrapper?style=flat-square" alt="Top language">
-  <img src="https://img.shields.io/badge/Use%20Case-Driver%20Wrapper-b91c1c?style=flat-square" alt="Use case">
+  <img src="https://img.shields.io/github/stars/vadlike/MicGuard?style=flat-square" alt="Stars">
+  <img src="https://img.shields.io/github/last-commit/vadlike/MicGuard?style=flat-square" alt="Last commit">
+  <img src="https://img.shields.io/github/license/vadlike/MicGuard?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D4?style=flat-square" alt="Platform">
+  <img src="https://img.shields.io/badge/Category-Audio%20Utility-0f766e?style=flat-square" alt="Category">
       </p>
-      <p><a href="https://github.com/vadlike/nanokvmpro-usb-graphic-driver-wrapper"><strong>Open repository</strong></a></p>
+      <p><a href="https://github.com/vadlike/MicGuard"><strong>Open repository</strong></a></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>mkcert GUI VADLIKE</h3>
-      <p>GUI wrapper for mkcert that makes local certificate generation easier for development workflows on Windows.</p>
+      <h3>NanoKVM Pro DIY Apps</h3>
+      <p>Curated collection of standalone touch-friendly apps for NanoKVM Pro, covering Wi-Fi, virtual media, KVM switching, HID automation, network testing, and service toggles.</p>
       <p>
-  <img src="https://img.shields.io/github/stars/vadlike/mkcert-GUI-VADLIKE?style=flat-square" alt="Stars">
-  <img src="https://img.shields.io/github/last-commit/vadlike/mkcert-GUI-VADLIKE?style=flat-square" alt="Last commit">
-  <img src="https://img.shields.io/github/languages/top/vadlike/mkcert-GUI-VADLIKE?style=flat-square" alt="Top language">
-  <img src="https://img.shields.io/github/license/vadlike/mkcert-GUI-VADLIKE?style=flat-square" alt="License">
-  <img src="https://img.shields.io/badge/Focus-Local%20SSL%20Workflow-0f766e?style=flat-square" alt="Focus">
+  <img src="https://img.shields.io/github/stars/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="Stars">
+  <img src="https://img.shields.io/github/last-commit/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="Last commit">
+  <img src="https://img.shields.io/github/languages/top/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="Top language">
+  <img src="https://img.shields.io/github/license/vadlike/NanoKVM-Pro-DIY-APPS?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Device-NanoKVM%20Pro-b91c1c?style=flat-square" alt="Device">
+  <img src="https://img.shields.io/badge/Category-App%20Hub-1d4ed8?style=flat-square" alt="Category">
       </p>
-      <p><a href="https://github.com/vadlike/mkcert-GUI-VADLIKE"><strong>Open repository</strong></a></p>
+      <p><a href="https://github.com/vadlike/NanoKVM-Pro-DIY-APPS"><strong>Open repository</strong></a></p>
     </td>
     <td width="50%" valign="top">
-      <h3>NVIDIA App Downloader</h3>
-      <p>PowerShell-based silent downloader and installer flow for the NVIDIA App with a lightweight folder selection UI.</p>
+      <h3>NanoKVM Pro Mount Web Manager</h3>
+      <p>NanoKVM Pro web manager with a hardened file manager, inline ISO mount actions, upload-from-URL support, and torrent downloads in a dark NanoKVM-themed UI.</p>
       <p>
-  <img src="https://img.shields.io/github/stars/vadlike/NvidiaApp-downloader?style=flat-square" alt="Stars">
-  <img src="https://img.shields.io/github/last-commit/vadlike/NvidiaApp-downloader?style=flat-square" alt="Last commit">
-  <img src="https://img.shields.io/github/languages/top/vadlike/NvidiaApp-downloader?style=flat-square" alt="Top language">
-  <img src="https://img.shields.io/badge/Flow-Silent%20Install-991b1b?style=flat-square" alt="Flow">
-  <img src="https://img.shields.io/badge/Platform-Windows-0078D4?style=flat-square" alt="Platform">
+  <img src="https://img.shields.io/github/stars/vadlike/NanoKVM-Pro-Mount-web-manager?style=flat-square" alt="Stars">
+  <img src="https://img.shields.io/github/last-commit/vadlike/NanoKVM-Pro-Mount-web-manager?style=flat-square" alt="Last commit">
+  <img src="https://img.shields.io/github/languages/top/vadlike/NanoKVM-Pro-Mount-web-manager?style=flat-square" alt="Top language">
+  <img src="https://img.shields.io/github/license/vadlike/NanoKVM-Pro-Mount-web-manager?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Device-NanoKVM%20Pro-b91c1c?style=flat-square" alt="Device">
+  <img src="https://img.shields.io/badge/Category-Web%20Manager-0f766e?style=flat-square" alt="Category">
       </p>
-      <p><a href="https://github.com/vadlike/NvidiaApp-downloader"><strong>Open repository</strong></a></p>
+      <p><a href="https://github.com/vadlike/NanoKVM-Pro-Mount-web-manager"><strong>Open repository</strong></a></p>
     </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>NanoKVM Pro Mirror</h3>
+      <p>Portable Windows viewer for mirroring the local NanoKVM LCD over SSH, with mouse tap and swipe control plus extra buttons for knob-style actions.</p>
+      <p>
+  <img src="https://img.shields.io/github/stars/vadlike/NanoKVM-Pro-mirror?style=flat-square" alt="Stars">
+  <img src="https://img.shields.io/github/last-commit/vadlike/NanoKVM-Pro-mirror?style=flat-square" alt="Last commit">
+  <img src="https://img.shields.io/github/languages/top/vadlike/NanoKVM-Pro-mirror?style=flat-square" alt="Top language">
+  <img src="https://img.shields.io/github/license/vadlike/NanoKVM-Pro-mirror?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Platform-Windows-0078D4?style=flat-square" alt="Platform">
+  <img src="https://img.shields.io/badge/Category-Remote%20Control-1d4ed8?style=flat-square" alt="Category">
+      </p>
+      <p><a href="https://github.com/vadlike/NanoKVM-Pro-mirror"><strong>Open repository</strong></a></p>
+    </td>
+    <td width="50%" valign="top"></td>
   </tr>
 </table>
 <!-- PROJECT-HIGHLIGHTS:END -->

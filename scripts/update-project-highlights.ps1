@@ -25,28 +25,39 @@ $projectConfigs = @(
         )
     },
     @{
-        Slug = "vadlike/nanokvmpro-usb-graphic-driver-wrapper"
-        Title = "NanoKVMPro USB Graphic Driver Wrapper"
-        Summary = "Ready-to-use Windows driver wrapper with a simplified install and removal flow for the NanoKVM Pro USB graphic driver."
+        Slug = "vadlike/MicGuard"
+        Title = "MicGuard"
+        Summary = "Lightweight Windows audio utility that keeps your preferred microphone selected, blocks unwanted device takeovers, and gives fast per-app volume control from a tray-first workflow."
         ExtraBadges = @(
-            @{ Label = "Use Case"; Message = "Driver Wrapper"; Color = "b91c1c"; Alt = "Use case" }
+            @{ Label = "Platform"; Message = "Windows 10/11"; Color = "0078D4"; Alt = "Platform" },
+            @{ Label = "Category"; Message = "Audio Utility"; Color = "0f766e"; Alt = "Category" }
         )
     },
     @{
-        Slug = "vadlike/mkcert-GUI-VADLIKE"
-        Title = "mkcert GUI VADLIKE"
-        Summary = "GUI wrapper for mkcert that makes local certificate generation easier for development workflows on Windows."
+        Slug = "vadlike/NanoKVM-Pro-DIY-APPS"
+        Title = "NanoKVM Pro DIY Apps"
+        Summary = "Curated collection of standalone touch-friendly apps for NanoKVM Pro, covering Wi-Fi, virtual media, KVM switching, HID automation, network testing, and service toggles."
         ExtraBadges = @(
-            @{ Label = "Focus"; Message = "Local SSL Workflow"; Color = "0f766e"; Alt = "Focus" }
+            @{ Label = "Device"; Message = "NanoKVM Pro"; Color = "b91c1c"; Alt = "Device" },
+            @{ Label = "Category"; Message = "App Hub"; Color = "1d4ed8"; Alt = "Category" }
         )
     },
     @{
-        Slug = "vadlike/NvidiaApp-downloader"
-        Title = "NVIDIA App Downloader"
-        Summary = "PowerShell-based silent downloader and installer flow for the NVIDIA App with a lightweight folder selection UI."
+        Slug = "vadlike/NanoKVM-Pro-Mount-web-manager"
+        Title = "NanoKVM Pro Mount Web Manager"
+        Summary = "NanoKVM Pro web manager with a hardened file manager, inline ISO mount actions, upload-from-URL support, and torrent downloads in a dark NanoKVM-themed UI."
         ExtraBadges = @(
-            @{ Label = "Flow"; Message = "Silent Install"; Color = "991b1b"; Alt = "Flow" },
-            @{ Label = "Platform"; Message = "Windows"; Color = "0078D4"; Alt = "Platform" }
+            @{ Label = "Device"; Message = "NanoKVM Pro"; Color = "b91c1c"; Alt = "Device" },
+            @{ Label = "Category"; Message = "Web Manager"; Color = "0f766e"; Alt = "Category" }
+        )
+    },
+    @{
+        Slug = "vadlike/NanoKVM-Pro-mirror"
+        Title = "NanoKVM Pro Mirror"
+        Summary = "Portable Windows viewer for mirroring the local NanoKVM LCD over SSH, with mouse tap and swipe control plus extra buttons for knob-style actions."
+        ExtraBadges = @(
+            @{ Label = "Platform"; Message = "Windows"; Color = "0078D4"; Alt = "Platform" },
+            @{ Label = "Category"; Message = "Remote Control"; Color = "1d4ed8"; Alt = "Category" }
         )
     }
 )
