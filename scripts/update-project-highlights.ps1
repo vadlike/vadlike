@@ -1,0 +1,170 @@
+[CmdletBinding()]
+param(
+    [string]$ReadmePath,
+    [string]$Token = $env:GITHUB_TOKEN,
+    [switch]$Preview
+)
+
+$ErrorActionPreference = "Stop"
+
+if (-not $ReadmePath) {
+    $ReadmePath = Join-Path $PSScriptRoot "..\README.md"
+}
+
+$startMarker = "<!-- PROJECT-HIGHLIGHTS:START -->"
+$endMarker = "<!-- PROJECT-HIGHLIGHTS:END -->"
+
+$projectConfigs = @(
+    @{
+        Slug = "vadlike/VAD-Control-Suite"
+        Title = "VAD Control Suite"
+        Summary = "Tray-first Windows control center for monitor blackout, desktop layouts, window tools, quick launcher folders, jiggler modes, and scheduled power actions."
+        ExtraBadges = @(
+            @{ Label = "Platform"; Message = "Windows 10/11"; Color = "0078D4"; Alt = "Platform" },
+            @{ Label = "Category"; Message = "Desktop Control"; Color = "1d4ed8"; Alt = "Category" }
+        )
+    },
+    @{
+        Slug = "vadlike/nanokvmpro-usb-graphic-driver-wrapper"
+        Title = "NanoKVMPro USB Graphic Driver Wrapper"
+        Summary = "Ready-to-use Windows driver wrapper with a simplified install and removal flow for the NanoKVM Pro USB graphic driver."
+        ExtraBadges = @(
+            @{ Label = "Use Case"; Message = "Driver Wrapper"; Color = "b91c1c"; Alt = "Use case" }
+        )
+    },
+    @{
+        Slug = "vadlike/mkcert-GUI-VADLIKE"
+        Title = "mkcert GUI VADLIKE"
+        Summary = "GUI wrapper for mkcert that makes local certificate generation easier for development workflows on Windows."
+        ExtraBadges = @(
+            @{ Label = "Focus"; Message = "Local SSL Workflow"; Color = "0f766e"; Alt = "Focus" }
+        )
+    },
+    @{
+        Slug = "vadlike/NvidiaApp-downloader"
+        Title = "NVIDIA App Downloader"
+        Summary = "PowerShell-based silent downloader and installer flow for the NVIDIA App with a lightweight folder selection UI."
+        ExtraBadges = @(
+            @{ Label = "Flow"; Message = "Silent Install"; Color = "991b1b"; Alt = "Flow" },
+            @{ Label = "Platform"; Message = "Windows"; Color = "0078D4"; Alt = "Platform" }
+        )
+    }
+)
+
+function New-BadgeTag {
+    param(
+        [Parameter(Mandatory = $true)][string]$Url,
+        [Parameter(Mandatory = $true)][string]$Alt
+    )
+
+    return "  <img src=""$Url"" alt=""$Alt"">"
+}
+
+function New-CustomBadgeUrl {
+    param(
+        [Parameter(Mandatory = $true)][string]$Label,
+        [Parameter(Mandatory = $true)][string]$Message,
+        [Parameter(Mandatory = $true)][string]$Color
+    )
+
+    $encodedLabel = [uri]::EscapeDataString($Label)
+    $encodedMessage = [uri]::EscapeDataString($Message)
+    return "https://img.shields.io/badge/{0}-{1}-{2}?style=flat-square" -f $encodedLabel, $encodedMessage, $Color
+}
+
+function Get-GitHubRepository {
+    param(
+        [Parameter(Mandatory = $true)][string]$Slug,
+        [Parameter(Mandatory = $true)][hashtable]$Headers
+    )
+
+    $uri = "https://api.github.com/repos/$Slug"
+    return Invoke-RestMethod -Uri $uri -Headers $Headers
+}
+
+$headers = @{
+    Accept = "application/vnd.github+json"
+    "User-Agent" = "vadlike-readme-project-updater"
+}
+
+if ($Token) {
+    $headers.Authorization = "Bearer $Token"
+}
+
+$cards = New-Object System.Collections.Generic.List[string]
+
+foreach ($config in $projectConfigs) {
+    $repo = Get-GitHubRepository -Slug $config.Slug -Headers $headers
+    $badges = New-Object System.Collections.Generic.List[string]
+
+    $badges.Add((New-BadgeTag -Url "https://img.shields.io/github/stars/$($config.Slug)?style=flat-square" -Alt "Stars"))
+    $badges.Add((New-BadgeTag -Url "https://img.shields.io/github/last-commit/$($config.Slug)?style=flat-square" -Alt "Last commit"))
+
+    if ($repo.language) {
+        $badges.Add((New-BadgeTag -Url "https://img.shields.io/github/languages/top/$($config.Slug)?style=flat-square" -Alt "Top language"))
+    }
+
+    if ($repo.license -and $repo.license.spdx_id -and $repo.license.spdx_id -ne "NOASSERTION") {
+        $badges.Add((New-BadgeTag -Url "https://img.shields.io/github/license/$($config.Slug)?style=flat-square" -Alt "License"))
+    }
+
+    foreach ($extraBadge in $config.ExtraBadges) {
+        $badges.Add((New-BadgeTag -Url (New-CustomBadgeUrl -Label $extraBadge.Label -Message $extraBadge.Message -Color $extraBadge.Color) -Alt $extraBadge.Alt))
+    }
+
+    $card = @"
+    <td width="50%" valign="top">
+      <h3>$($config.Title)</h3>
+      <p>$($config.Summary)</p>
+      <p>
+$($badges -join "`r`n")
+      </p>
+      <p><a href="$($repo.html_url)"><strong>Open repository</strong></a></p>
+    </td>
+"@
+
+    $cards.Add($card.TrimEnd())
+}
+
+$rows = New-Object System.Collections.Generic.List[string]
+for ($i = 0; $i -lt $cards.Count; $i += 2) {
+    $left = $cards[$i]
+    $right = if ($i + 1 -lt $cards.Count) { $cards[$i + 1] } else { '    <td width="50%" valign="top"></td>' }
+
+    $row = @"
+  <tr>
+$left
+$right
+  </tr>
+"@
+
+    $rows.Add($row.TrimEnd())
+}
+
+$generatedBlock = @"
+$startMarker
+<!-- Generated by scripts/update-project-highlights.ps1 -->
+<table>
+$($rows -join "`r`n")
+</table>
+$endMarker
+"@
+
+$readme = [System.IO.File]::ReadAllText($ReadmePath)
+
+if (-not $readme.Contains($startMarker) -or -not $readme.Contains($endMarker)) {
+    throw "README markers not found. Expected $startMarker and $endMarker."
+}
+
+$pattern = [regex]::Escape($startMarker) + ".*?" + [regex]::Escape($endMarker)
+$updatedReadme = [regex]::Replace($readme, $pattern, [System.Text.RegularExpressions.MatchEvaluator]{ param($m) $generatedBlock }, [System.Text.RegularExpressions.RegexOptions]::Singleline)
+
+if ($Preview) {
+    $generatedBlock
+    exit 0
+}
+
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+[System.IO.File]::WriteAllText($ReadmePath, $updatedReadme, $utf8NoBom)
+
+Write-Output "Updated project highlights in $ReadmePath"
